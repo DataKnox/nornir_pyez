@@ -69,12 +69,6 @@ import os
 from nornir import InitNornir
 from nornir_utils.plugins.functions import print_result
 from rich import print
-from nornir.core.plugins.connections import ConnectionPluginRegister
-from nornir_pyez.plugins.connections import Pyez
-
-
-ConnectionPluginRegister.register("pyez", Pyez)
-
 
 script_dir = os.path.dirname(os.path.realpath(__file__))
 
