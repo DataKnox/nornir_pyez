@@ -174,7 +174,7 @@ print_result(response)
 
 ## Contacts
 
-https://dataknox.dev
-https://twitter.com/data_knox
-https://youtube.com/c/dataknox
-https://learn.gg/dataknox
+- https://dataknox.dev
+- https://twitter.com/data_knox
+- https://youtube.com/c/dataknox
+- https://learn.gg/dataknox
