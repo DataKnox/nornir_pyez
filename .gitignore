@@ -8,3 +8,5 @@ nornir_pyez/plugins/tasks/__pycache__/pyez_config.cpython-39.pyc
 nornir_pyez/plugins/tasks/__pycache__/pyez_get_config.cpython-39.pyc
 nornir_pyez/plugins/tasks/__pycache__/pyez_diff.cpython-39.pyc
 nornir_pyez/plugins/tasks/__pycache__/pyez_commit.cpython-39.pyc
+nornir_pyez/plugins/tasks/__pycache__/pyez_route_info.cpython-39.pyc
+nornir_pyez/plugins/tasks/__pycache__/pyez_int_terse.cpython-39.pyc
