@@ -5,3 +5,6 @@ nornir_pyez/plugins/connections/__pycache__/__init__.cpython-39.pyc
 nornir_pyez/plugins/__pycache__/__init__.cpython-39.pyc
 nornir_pyez/__pycache__/__init__.cpython-39.pyc
 nornir_pyez/plugins/tasks/__pycache__/pyez_config.cpython-39.pyc
+nornir_pyez/plugins/tasks/__pycache__/pyez_get_config.cpython-39.pyc
+nornir_pyez/plugins/tasks/__pycache__/pyez_diff.cpython-39.pyc
+nornir_pyez/plugins/tasks/__pycache__/pyez_commit.cpython-39.pyc
