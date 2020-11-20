@@ -3,3 +3,6 @@ junos_group:
     username: 'knox'
     password: 'juniper1'
     platform: junos
+    data:
+        dns_server: '10.10.10.189'
+        ntp_server: 'time.google.com'
