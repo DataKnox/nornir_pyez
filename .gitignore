@@ -10,3 +10,12 @@ nornir_pyez/plugins/tasks/__pycache__/pyez_diff.cpython-39.pyc
 nornir_pyez/plugins/tasks/__pycache__/pyez_commit.cpython-39.pyc
 nornir_pyez/plugins/tasks/__pycache__/pyez_route_info.cpython-39.pyc
 nornir_pyez/plugins/tasks/__pycache__/pyez_int_terse.cpython-39.pyc
+build/
+dist/
+nornir_pyez.egg-info/dependency_links.txt
+nornir_pyez.egg-info/entry_points.txt
+nornir_pyez.egg-info/not-zip-safe
+nornir_pyez.egg-info/PKG-INFO
+nornir_pyez.egg-info/requires.txt
+nornir_pyez.egg-info/SOURCES.txt
+nornir_pyez.egg-info/top_level.txt
