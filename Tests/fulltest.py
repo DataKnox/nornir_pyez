@@ -25,7 +25,7 @@ xml_payload = """
                         <family operation="replace">
                             <inet>
                                 <address>
-                                    <name>3.3.3.4/32</name>
+                                    <name>3.3.3.3/32</name>
                                 </address>
                             </inet>
                         </family>
