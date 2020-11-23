@@ -1,0 +1,6 @@
+nornir.log
+nornir_pyez/plugins/tasks/__pycache__/pyez_facts.cpython-39.pyc
+nornir_pyez/plugins/tasks/__pycache__/__init__.cpython-39.pyc
+nornir_pyez/plugins/connections/__pycache__/__init__.cpython-39.pyc
+nornir_pyez/plugins/__pycache__/__init__.cpython-39.pyc
+nornir_pyez/__pycache__/__init__.cpython-39.pyc

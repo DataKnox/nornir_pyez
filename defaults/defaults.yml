@@ -1,0 +1,4 @@
+---
+junos_group:
+    username: 'knox'
+    platform: junos

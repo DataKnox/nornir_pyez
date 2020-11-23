@@ -1,0 +1,5 @@
+---
+junos_group:
+    username: 'knox'
+    password: 'juniper1'
+    platform: junos
