@@ -19,6 +19,7 @@ setup(name='nornir_pyez',
       ],
       long_description=long_description,
       long_description_content_type='text/markdown',
+      install_requires=['xmltodict', 'nornir', 'nornir_utils', 'junos-eznc'],
       entry_points={  # Optional
           'nornir.plugins.connections': "pyez = nornir_pyez.plugins.connections:Pyez"
       },
