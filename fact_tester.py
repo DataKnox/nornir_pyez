@@ -1,4 +1,4 @@
-from nornir_pyez.plugins.tasks.pyez_facts import pyez_facts
+from nornir_pyez.plugins.tasks import pyez_facts
 import os
 from nornir import InitNornir
 from nornir_utils.plugins.functions import print_result

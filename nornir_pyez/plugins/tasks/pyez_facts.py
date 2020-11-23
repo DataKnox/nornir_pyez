@@ -1,11 +1,7 @@
 import copy
 from typing import Any, Dict, List, Optional
-
 from nornir.core.task import Result, Task
-
 from nornir_pyez.plugins.connections import CONNECTION_NAME
-
-#GetterOptionsDict = Optional[Dict[str, Dict[str, Any]]]
 
 
 def pyez_facts(
