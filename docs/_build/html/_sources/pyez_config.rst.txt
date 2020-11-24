@@ -87,3 +87,56 @@ Full example::
     devices = []
     for dev in response:
         print(response[dev].result)
+
+Now supporting Templates
+The PyEZ Library uses a template like so. First let's explore the Jinja2 template::
+
+    set system name-server {{ dns_server }}
+    set system ntp server {{ ntp_server }}
+
+We can retrieve this as arbitrary data from hosts or groups.yml::
+
+    ---
+    junos_group:
+        username: 'knox'
+        password: 'juniper1'
+        platform: junos
+        data:
+            dns_server: '10.10.10.189'
+            ntp_server: 'time.google.com'
+
+The official PyEZ method is typically written like so::
+
+    cu.load(template_path=CONFIG_FILE, template_vars=CONFIG_DATA, format=’set’, merge=True)
+
+However the load method is replaced by pyez_config. Here is a sample script::
+
+    from nornir_pyez.plugins.tasks import pyez_config, pyez_diff, pyez_commit
+    import os
+    from nornir import InitNornir
+    from nornir.core.task import Task, Result
+    from nornir_utils.plugins.functions import print_result
+    from nornir_utils.plugins.tasks.data import load_yaml
+    from rich import print
+
+    script_dir = os.path.dirname(os.path.realpath(__file__))
+
+    nr = InitNornir(config_file=f"{script_dir}/config.yml")
+
+    def template_config(task):
+        # retrieve data from groups.yml
+        data = {}
+        data['dns_server'] = task.host['dns_server']
+        data['ntp_server'] = task.host['ntp_server']
+        print(data)
+        response = task.run(
+            task=pyez_config, template_path='junos.j2', template_vars=data, data_format='set')
+        if response:
+            diff = task.run(pyez_diff)
+        if diff:
+            task.run(task=pyez_commit)
+
+
+    response = nr.run(
+        task=template_config)
+    print_result(response)

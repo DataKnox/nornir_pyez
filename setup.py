@@ -7,7 +7,7 @@ with open("requirements.txt", "r") as f:
     INSTALL_REQUIRES = f.read().splitlines()
 
 setuptools.setup(name='nornir_pyez',
-                 version='0.0.4',
+                 version='0.0.5',
                  description='PyEZs library and plugins for Nornir',
                  url='https://github.com/DataKnox/nornir_pyez',
                  packages=setuptools.find_packages(),
