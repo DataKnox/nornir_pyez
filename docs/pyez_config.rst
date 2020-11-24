@@ -1,5 +1,5 @@
-pyez_config.rst
-===============
+pyez_config
+===========
 
 1. Begin by importing your method::
 
