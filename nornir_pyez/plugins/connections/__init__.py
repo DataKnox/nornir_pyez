@@ -24,6 +24,7 @@ class Pyez:
             "host": hostname,
             "user": username,
             "password": password,
+            "port": port,
             "optional_args": {},
         }
 
