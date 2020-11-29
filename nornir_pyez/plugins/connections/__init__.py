@@ -19,7 +19,8 @@ class Pyez:
         configuration: Optional[Config] = None,
     ) -> None:
         extras = extras or {}
-
+        if not port:
+            port = 830
         parameters: Dict[str, Any] = {
             "host": hostname,
             "user": username,
@@ -27,9 +28,6 @@ class Pyez:
             "port": port,
             "optional_args": {},
         }
-
-        if port and "port" not in parameters["optional_args"]:
-            parameters["optional_args"]["port"] = port
 
         connection = Device(**parameters)
 
