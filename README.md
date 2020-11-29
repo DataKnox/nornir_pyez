@@ -8,10 +8,16 @@ Connections - Pyez
 
 This plugin is used to leverage the power of Juniper's PyEZ with the Nornir framework to offer quicker and more stable delivery of network services while also simplifying and abstracting network inventory
 
-## Installation - ALPHA RELEASE!!! 
+## Installation
 
 ```
-pip install nornir-pyez==0.0.5
+pip install nornir-pyez==0.0.6
+```
+
+## Update
+
+```
+pip3 install --upgrade nornir_pyez
 ```
 
 ## Read the Documentation
