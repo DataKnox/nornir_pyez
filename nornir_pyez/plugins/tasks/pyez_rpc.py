@@ -9,7 +9,7 @@ import json
 
 def pyez_rpc(
     task: Task,
-    extras: Dict,
+    extras: Dict = None,
     func
 ) -> Result:
 
