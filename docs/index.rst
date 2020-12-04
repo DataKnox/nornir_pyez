@@ -6,7 +6,7 @@ Install
 You can install nornir_pyez with 
 
 ```
-pip install nornir-pyez==0.0.8
+pip install nornir-pyez==0.0.9
 ```
 
 Guide

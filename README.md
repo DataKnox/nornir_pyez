@@ -11,7 +11,7 @@ This plugin is used to leverage the power of Juniper's PyEZ with the Nornir fram
 ## Installation
 
 ```
-pip install nornir-pyez==0.0.8
+pip install nornir-pyez==0.0.9
 ```
 
 ## Update

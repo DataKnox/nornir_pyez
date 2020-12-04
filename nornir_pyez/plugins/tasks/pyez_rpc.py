@@ -9,8 +9,8 @@ import json
 
 def pyez_rpc(
     task: Task,
+    func: str,
     extras: Dict = None,
-    func
 ) -> Result:
 
     device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
