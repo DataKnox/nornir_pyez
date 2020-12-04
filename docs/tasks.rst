@@ -13,3 +13,4 @@ Here you will find a list of available methods and their corresponding documenta
    pyez_config
    pyez_diff
    pyez_commit
+   pyez_rpc

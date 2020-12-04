@@ -5,7 +5,7 @@ from .pyez_commit import pyez_commit
 from .pyez_diff import pyez_diff
 from .pyez_int_terse import pyez_int_terse
 from .pyez_route_info import pyez_route_info
-
+from .pyez_rpc import pyez_rpc
 
 __all__ = (
     "pyez_facts",
@@ -14,5 +14,6 @@ __all__ = (
     "pyez_diff",
     "pyez_commit",
     "pyez_int_terse",
-    "pyez_route_info"
+    "pyez_route_info",
+    "pyez_rpc",
 )
