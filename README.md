@@ -28,7 +28,7 @@ https://nornir-pyez.readthedocs.io/en/latest/
 
 pyez get facts:
 
-```
+```python
 from nornir_pyez.plugins.tasks import pyez_facts
 import os
 from nornir import InitNornir
@@ -54,7 +54,7 @@ for dev in response:
 
 PyEZ Get Config
 
-```
+```python
 from nornir_pyez.plugins.tasks import pyez_get_config
 import os
 from nornir import InitNornir
@@ -79,7 +79,7 @@ for dev in response:
 ```
 Get Configs with Args
 
-```
+```python
 from nornir_pyez.plugins.tasks import pyez_get_config
 import os
 from nornir import InitNornir
@@ -107,7 +107,7 @@ for dev in response:
 ```
 
 Set text config
-```
+```python
 from nornir_pyez.plugins.tasks import pyez_config
 import os
 from nornir import InitNornir
@@ -142,7 +142,7 @@ for dev in response:
 ```
 
 Full test with Operation of Replace Config using XML
-```
+```python
 from nornir_pyez.plugins.tasks import pyez_config, pyez_diff, pyez_commit
 import os
 from nornir import InitNornir
@@ -189,7 +189,7 @@ print_result(response)
 ```
 
 Show Interfaces Terse
-```
+```python
 from nornir_pyez.plugins.tasks import pyez_int_terse
 import os
 from nornir import InitNornir
@@ -212,7 +212,7 @@ for dev in response:
 
 ```
 Get Route Information
-```
+```python
 from nornir_pyez.plugins.tasks import pyez_route_info
 import os
 from nornir import InitNornir
