@@ -2,9 +2,9 @@
 inventory:
     plugin: YAMLInventory
     options:
-        host_file: './hosts/hosts.yml'
-        group_file: './groups/groups.yml'
-        defaults_file: './defaults/defaults.yml'
+        host_file: '/nornir_pyez/hosts/hosts.yml'
+        group_file: '/nornir_pyez/groups/groups.yml'
+        defaults_file: '/nornir_pyez/defaults/defaults.yml'
 
 runner:
     plugin: threaded

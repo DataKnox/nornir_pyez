@@ -27,6 +27,8 @@ class Pyez:
             "password": password,
             "port": port,
             "optional_args": {},
+            "ssh_config": extras["ssh_config"] if "ssh_config" in extras.keys() else None,
+            "ssh_private_key_file": extras["ssh_private_key_file"] if "ssh_private_key_file" in extras.keys() else None,
         }
 
         connection = Device(**parameters)

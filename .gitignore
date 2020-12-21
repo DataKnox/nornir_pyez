@@ -19,3 +19,5 @@ nornir_pyez.egg-info/PKG-INFO
 nornir_pyez.egg-info/requires.txt
 nornir_pyez.egg-info/SOURCES.txt
 nornir_pyez.egg-info/top_level.txt
+.vscode/settings.json
+nornir_pyez/plugins/tasks/__pycache__/pyez_rpc.cpython-39.pyc

@@ -21,6 +21,4 @@ response = nr.run(
 
 # response is an AggregatedResult, which behaves like a list
 # there is a response object for each device in inventory
-devices = []
-for dev in response:
-    print(response[dev].result)
+print_result(response)
