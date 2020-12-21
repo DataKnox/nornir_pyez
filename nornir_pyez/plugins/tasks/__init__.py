@@ -6,6 +6,10 @@ from .pyez_diff import pyez_diff
 from .pyez_int_terse import pyez_int_terse
 from .pyez_route_info import pyez_route_info
 from .pyez_rpc import pyez_rpc
+from .pyez_sec_nat import pyez_sec_nat_dest, pyez_sec_nat_src
+from .pyez_sec_policy import pyez_sec_policy
+from .pyez_sec_vpn import pyez_sec_ike, pyez_sec_ipsec
+from .pyez_sec_zones import pyez_sec_zones
 
 __all__ = (
     "pyez_facts",
@@ -13,7 +17,13 @@ __all__ = (
     "pyez_get_config",
     "pyez_diff",
     "pyez_commit",
-    "pyez_int_terse",
+    "pyez_fw_policy",
     "pyez_route_info",
     "pyez_rpc",
+    "pyez_sec_ike",
+    "pyez_sec_ipsec",
+    "pyez_sec_nat_dest",
+    "pyez_sec_nat_src",
+    "pyez_sec_policy",
+    "pyez_sec_zones",
 )
