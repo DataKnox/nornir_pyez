@@ -1,4 +1,4 @@
-pyez_sec_nat_src
+pyez_sec_nat_dest
 ===============
 
 This is the equivalent to running "show security nat destination rule all" and receiving the result as a Dict
