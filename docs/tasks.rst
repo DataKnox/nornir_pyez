@@ -14,3 +14,9 @@ Here you will find a list of available methods and their corresponding documenta
    pyez_diff
    pyez_commit
    pyez_rpc
+   pyez_sec_ike
+   pyez_sec_ipsec
+   pyez_sec_nat_dest
+   pyez_sec_nat_src
+   pyez_sec_policy
+   pyez_sec_zones
