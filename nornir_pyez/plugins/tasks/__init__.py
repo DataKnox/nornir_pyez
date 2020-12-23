@@ -17,7 +17,6 @@ __all__ = (
     "pyez_get_config",
     "pyez_diff",
     "pyez_commit",
-    "pyez_fw_policy",
     "pyez_int_terse",
     "pyez_route_info",
     "pyez_rpc",
