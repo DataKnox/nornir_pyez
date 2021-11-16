@@ -1,5 +1,6 @@
-# Ignore log file
+# Some nornir Ignores
 nornir.log
+nornir_pyez.egg-info/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
