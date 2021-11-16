@@ -10,6 +10,9 @@ from .pyez_sec_nat import pyez_sec_nat_dest, pyez_sec_nat_src
 from .pyez_sec_policy import pyez_sec_policy
 from .pyez_sec_vpn import pyez_sec_ike, pyez_sec_ipsec
 from .pyez_sec_zones import pyez_sec_zones
+from .pyez_chassis_inventory import pyez_chassis_inventory
+from .pyez_arp_noresolve import pyez_get_arp
+from .pyez_optics_diags import pyez_get_int_optics_diag_info
 
 __all__ = (
     "pyez_facts",
@@ -26,4 +29,8 @@ __all__ = (
     "pyez_sec_nat_src",
     "pyez_sec_policy",
     "pyez_sec_zones",
+    "pyez_chassis_inventory",
+    "pyez_get_arp",
+    "pyez_get_int_optics_diag_info",
+
 )
