@@ -1,7 +1,7 @@
 pyez_commit
 ===========
 
-Use this task to commit the candidate datastore to the committed datastore. You can add an optionnal comment. Note this performs a commit check first and performs a Rollback upon failure
+Use this task to commit the candidate datastore to the committed datastore. You can add an optional comment. Note this performs a commit check first and performs a Rollback upon failure
 
 Example::
 
