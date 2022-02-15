@@ -13,6 +13,7 @@ Here you will find a list of available methods and their corresponding documenta
    pyez_config
    pyez_diff
    pyez_commit
+   pyez_rollback
    pyez_rpc
    pyez_sec_ike
    pyez_sec_ipsec

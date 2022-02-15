@@ -5,6 +5,7 @@ from .pyez_commit import pyez_commit
 from .pyez_diff import pyez_diff
 from .pyez_int_terse import pyez_int_terse
 from .pyez_route_info import pyez_route_info
+from .pyez_rollback import pyez_rollback
 from .pyez_rpc import pyez_rpc
 from .pyez_sec_nat import pyez_sec_nat_dest, pyez_sec_nat_src
 from .pyez_sec_policy import pyez_sec_policy
@@ -18,6 +19,7 @@ __all__ = (
     "pyez_diff",
     "pyez_commit",
     "pyez_int_terse",
+    "pyez_rollback",
     "pyez_route_info",
     "pyez_rpc",
     "pyez_sec_ike",
