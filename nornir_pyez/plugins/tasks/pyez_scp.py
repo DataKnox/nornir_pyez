@@ -9,7 +9,7 @@ def pyez_scp(
     task: Task,
     file: str,
     path: str,
-    scpargs: Dict = None,
+    scpargs: Dict = {"Progress": True},
 ) -> Result:
     device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
     device.timeout = 300
