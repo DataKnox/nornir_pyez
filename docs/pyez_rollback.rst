@@ -1,7 +1,7 @@
 pyez_rollback
 ===========
 
-Use this task to rollback a pending config in the candidate datastore and unlock for next config.
+Use this task to rollback to a previous configuration or delete a pending config in the candidate datastore and unlock for next config.
 
 Example::
 
@@ -16,7 +16,8 @@ Example::
     nr = InitNornir(config_file=f"{script_dir}/config.yml")
 
     response = nr.run(
-        task=pyez_rollback
+        task=pyez_rollback,
+        rollback_number=2
     )
 
     print_result(response)
