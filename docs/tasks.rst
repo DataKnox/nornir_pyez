@@ -9,12 +9,13 @@ Here you will find a list of available methods and their corresponding documenta
    pyez_facts
    pyez_get_config
    pyez_cmd
+   pyez_checksum
    pyez_int_terse
+   pyez_rollback
    pyez_route_info
    pyez_config
    pyez_diff
    pyez_commit
-   pyez_rollback
    pyez_rpc
    pyez_scp
    pyez_sec_ike
