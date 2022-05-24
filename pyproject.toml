@@ -1,8 +1,8 @@
 [tool.poetry]
 name = "nornir_pyez"
-version = "0.1.0"
+version = "0.2.0"
 description = "PyEZ Plugin for Nornir"
-authors = ["Knox Hutchinson <knox@knoxsdata.com>"]
+authors = ["Knox Hutchinson <knox@knoxsdata.com>", "geg347 <gaetan@egger-family.eu>"]
 license = "Apache-2.0"
 
 [tool.poetry.plugins."nornir.plugins.connections"]
