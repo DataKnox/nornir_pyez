@@ -1,7 +1,7 @@
 pyez_commit
 ===========
 
-Use this task to commit the candidate datastore to the committed datastore. Note this performs a commit check first and performs a Rollback upon failure
+Use this task to commit the candidate datastore to the committed datastore. You can add an optionnal comment. Note this performs a commit check first and performs a Rollback upon failure
 
 Example::
 
@@ -16,7 +16,7 @@ Example::
     nr = InitNornir(config_file=f"{script_dir}/config.yml")
 
     response = nr.run(
-        task=pyez_commit
+        task=pyez_commit, comment="Your comment"
     )
 
     print_result(response)
