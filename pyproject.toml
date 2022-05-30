@@ -11,7 +11,7 @@ license = "Apache-2.0"
 [tool.poetry.dependencies]
 python = "^3.6"
 junos-eznc = "^2.5"
-nornir = { version = "~3.0.0b1", allow-prereleases = true }
+nornir = { version = ">=3.0.0", allow-prereleases = true }
 xmltodict = "0.12.0"
 
 [tool.poetry.dev-dependencies]
