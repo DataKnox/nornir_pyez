@@ -6,14 +6,15 @@ from nornir.core.task import Result, Task
 from nornir_pyez.plugins.connections import CONNECTION_NAME
 
 
-def pyez_commit(task: Task, comment: str=None
-                ) -> Result:
+def pyez_rollback(task: Task, rollback_number: int = 0) -> Result:
     device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
     device.timeout = 300
     config = Config(device)
-    if config.commit_check() == True:
-        config.commit(comment=comment)
-    else:
-        config.rollback()
+    config.rollback(rollback_number)
     config.unlock()
-    return Result(host=task.host, result=f"Successfully committed")
+    return Result(
+        host=task.host,
+        result="Successfully emptied config DB"
+        if rollback_number == 0
+        else f"Successfully rollbacked {rollback_number} commit/s",
+    )
