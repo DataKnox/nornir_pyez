@@ -10,11 +10,14 @@ def pyez_rollback(task: Task, rollback_number: int = 0) -> Result:
     device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
     device.timeout = 300
     config = Config(device)
+    if rollback_number != 0:
+        config.lock()
     config.rollback(rollback_number)
-    config.unlock()
+    if rollback_number == 0:
+        config.unlock()
     return Result(
         host=task.host,
-        result="Successfully emptied config DB"
+        result="Successfully emptied config DB and unlocked config"
         if rollback_number == 0
-        else f"Successfully rollbacked {rollback_number} commit/s",
+        else f"Successfully rollbacked {rollback_number} commit/s, now you may need to commit",
     )

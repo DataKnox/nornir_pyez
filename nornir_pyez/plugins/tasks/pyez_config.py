@@ -41,4 +41,4 @@ def pyez_config(
             config.rollback()
         config.unlock()
 
-    return Result(host=task.host, result=f"Successfully deployed config \n {payload}")
+    return Result(host=task.host, result=f"Successfully deployed config \n {payload} \nNow you may need to commit or rollback 0")
