@@ -1,7 +1,6 @@
 from .pyez_facts import pyez_facts
 from .pyez_checksum import pyez_checksum
 from .pyez_cmd import pyez_cmd
-from .pyez_checksum import pyez_checksum
 from .pyez_config import pyez_config
 from .pyez_get_config import pyez_get_config
 from .pyez_commit import pyez_commit
@@ -20,7 +19,6 @@ __all__ = (
     "pyez_facts",
     "pyez_checksum",
     "pyez_cmd",
-    "pyez_checksum",
     "pyez_config",
     "pyez_get_config",
     "pyez_diff",
