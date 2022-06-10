@@ -9,7 +9,6 @@ from nornir_pyez.plugins.connections import CONNECTION_NAME
 def pyez_commit(task: Task, comment: str=None
                 ) -> Result:
     device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
-    device.timeout = 300
     config = Config(device)
     if config.commit_check() == True:
         config.commit(comment=comment)

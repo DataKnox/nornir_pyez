@@ -17,7 +17,6 @@ def pyez_config(
 ) -> Result:
 
     device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
-    device.timeout = 300
     config = Config(device)
     config.lock()
     if template_path:
