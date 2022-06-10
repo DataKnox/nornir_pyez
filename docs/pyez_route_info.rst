@@ -1,7 +1,23 @@
 pyez_route_info
 ===============
 
-This is the equivalent to running "show route" and receiving the result as a Dict
+This is the equivalent to running "show route" and receiving the result as a Dict.
+You can now add the following variable to filter the route : 
+    task: Task,
+    all: bool = False,
+    best: bool = False,
+    brief: bool = False,
+    detail: bool = False,
+    exact: bool = False,
+    hidden: bool = False,
+    localization: bool = False, # get-fib-localization-information
+    martians: bool = False,     # get-route-martians
+    private: bool = False,
+    instance_name: str = "all", # get-instance-information
+    protocol: str = "all",
+    table: str = "all",
+    rib_sharding: str = "main",
+    destination: str = ""
 
 Example::
 
