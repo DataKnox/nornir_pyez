@@ -8,7 +8,6 @@ from nornir_pyez.plugins.connections import CONNECTION_NAME
 
 def pyez_rollback(task: Task, rollback_number: int = 0) -> Result:
     device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
-    device.timeout = 300
     config = Config(device)
     if rollback_number != 0:
         config.lock()

@@ -7,7 +7,6 @@ from jnpr.junos.utils.start_shell import StartShell
 def pyez_cmd(task: Task, command: str,
                 ) -> Result:
     device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
-    device.timeout = 300
     with StartShell(device) as sh:
         got = sh.run(command)
     return Result(host=task.host, result=f"Command launched, output: {got}")

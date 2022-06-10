@@ -12,7 +12,6 @@ def pyez_scp(
     scpargs: Dict = {"progress": True},
 ) -> Result:
     device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
-    device.timeout = 300
     with SCP(device, **scpargs) as scp:
         print(scp.put(file, path))
     return Result(host=task.host, result=f"Successfully copied")
