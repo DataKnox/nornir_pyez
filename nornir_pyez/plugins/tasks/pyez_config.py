@@ -13,12 +13,14 @@ def pyez_config(
     data_format: str = 'text',
     template_path: str = None,
     template_vars: str = None,
-    commit_now: bool = False
+    commit_now: bool = False,
+    stage: int = 0
 ) -> Result:
 
     device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
     config = Config(device)
-    config.lock()
+    if stage == 0:
+        config.lock()
     if template_path:
         config.load(template_path=template_path,
                     template_vars=template_vars, format=data_format)
