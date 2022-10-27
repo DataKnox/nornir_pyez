@@ -44,19 +44,19 @@ An XML payload example::
 
 Note JSON is also a valid payload with data_format='json' set
 
-3. If you want to load several configuration files, you will need to the stage counter. This counter solve the problem of the lock on the Junos OS database when loading configuration.
-In your code you will need to initialize this counter and to increment it in your for loop (or manually set it at other than 0 in your next pyez_config calls).
+3. If you want to load several configuration files, you will need to use the first_loading flag. This flag solve the problem of the lock on the Junos OS database when loading configuration.
+In your code you will need to set this flag as False at your second and more calls of the pyez_config task.
 
-    i = 0
+    first_loading = True
     for conf_file in conf_files:
         
         config_response = task.run(
             task=pyez_config,
             template_path=conf_file,
             template_vars={},
-            stage=i,
+            first_loading=first_loading,
         )
-        i=i+1
+        first_loading = False
 
 4. Next you need to decide if you want to commit the changes now, or create a new task to view the diff
 
