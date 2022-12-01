@@ -15,8 +15,8 @@ script_dir = os.path.dirname(os.path.realpath(__file__))
 
 nr = InitNornir(config_file=f"{script_dir}/config.yml")
 
-# xpath = 'mpls-lsp-information/rsvp-session-data'
-# xml = '<rsvp-session></rsvp-session>'
+# xpath = 'mpls-lsp-information/rsvp-session-data/rsvp-session'
+# xml = '<mpls-lsp></mpls-lsp>'
 # database = 'committed'
 
 response = nr.run(
