@@ -1,4 +1,4 @@
-from nornir_pyez.plugins.tasks import pyez_route_info
+from nornir_pyez.plugins.tasks import pyez_get_mpls_lsp_info
 import os
 from nornir import InitNornir
 from nornir_utils.plugins.functions import print_result
