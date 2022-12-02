@@ -18,6 +18,7 @@ from .pyez_chassis_inventory import pyez_chassis_inventory
 from .pyez_arp_noresolve import pyez_get_arp
 from .pyez_optics_diags import pyez_get_int_optics_diag_info
 from .pyez_get_mpls_lsp_info import pyez_get_mpls_lsp_info
+from .pyez_get_license import pyez_get_license_info
 
 __all__ = (
     "pyez_facts",
@@ -42,5 +43,6 @@ __all__ = (
     "pyez_get_arp",
     "pyez_get_int_optics_diag_info",
     "pyez_get_mpls_lsp_info",
+    "pyez_get_license_info",
 
 )
