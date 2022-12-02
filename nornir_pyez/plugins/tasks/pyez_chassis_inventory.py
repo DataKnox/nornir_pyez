@@ -9,17 +9,17 @@ import json
 
 def pyez_chassis_inventory(
     task: Task,
-    clei-models: str = False,
-    detail: str = False,
-    extensive: str = False,
-    models: str = False
+    clei_models: bool = False,
+    detail: bool = False,
+    extensive: bool = False,
+    models: bool = False
 ) -> Result:
 
     device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
 
     cmd_args = {}
-    if clei-models is True:
-        cmd_args["clei-models"]=clei-models
+    if clei_models is True:
+        cmd_args["clei-models"]=clei_models
     if detail is True:
         cmd_args["detail"]=detail
     if extensive is True:
