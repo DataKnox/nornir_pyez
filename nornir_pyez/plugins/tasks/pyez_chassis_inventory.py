@@ -25,6 +25,7 @@ def pyez_chassis_inventory(
     if extensive is True:
         cmd_args["extensive"]=extensive
     if models is True:
+        """Does not exist on QFX devices"""
         cmd_args["models"]=models
 
     data = device.rpc.get_chassis_inventory(**cmd_args)
