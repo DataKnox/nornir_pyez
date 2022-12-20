@@ -19,7 +19,7 @@ def pyez_rpc(
         data = function(**extras)
     else:
         data = function()
-    if isinstance(bool, data):
+    if isinstance(data, bool):
         data = f'''<nornir_pyez_notification>This is a known error for some RPC, this RPC request didn't return a well 
         formed XML message, but: {data}</nornir_pyez_notification>'''
     else:
