@@ -9,10 +9,7 @@ import json
 
 def pyez_chassis_inventory(
     task: Task,
-    clei_models: bool = False,
-    detail: bool = False,
-    extensive: bool = False,
-    models: bool = False
+    extras: Dict = None,
 ) -> Result:
 
     device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
