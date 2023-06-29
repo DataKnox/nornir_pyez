@@ -17,18 +17,10 @@ def pyez_chassis_inventory(
 
     device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
 
-    cmd_args = {}
-    if clei_models is True:
-        cmd_args["clei-models"]=clei_models
-    if detail is True:
-        cmd_args["detail"]=detail
-    if extensive is True:
-        cmd_args["extensive"]=extensive
-    if models is True:
-        """Does not exist on QFX devices"""
-        cmd_args["models"]=models
-
-    data = device.rpc.get_chassis_inventory(**cmd_args)
+    if extras:
+        data = device.rpc.get_chassis_inventory(**extras)
+    else:
+        data = device.rpc.get_chassis_inventory()
     data = etree.tostring(data, encoding='unicode', pretty_print=True)
     parsed = xmltodict.parse(data)
     clean_parse = json.loads(json.dumps(parsed))
