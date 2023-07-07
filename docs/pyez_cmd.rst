@@ -2,7 +2,10 @@ pyez_cmd
 ===========
 
 Use this task to execute single command on your devices.
-You can just display the whole result or parse it.
+You can just display the whole result or parse it.  Depending
+on various factors, you may need to wrap the command in
+'cli -c' as if you are operating within the shell instead of
+JunOS.
 
 Example::
 
@@ -29,3 +32,7 @@ Example::
     # Or parse it (and do whatever you want)
     for key in response.keys():
         result = response[key][1].result
+
+StartShell command example::
+
+    command = 'cli -c "show system information"'
