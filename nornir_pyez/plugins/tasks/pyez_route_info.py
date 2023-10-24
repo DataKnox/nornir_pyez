@@ -26,16 +26,16 @@ def pyez_route_info(
 ) -> Result:
 
     cmd_args = {}
-    if destination is not "":
+    if destination != "":
         cmd_args["destination"]=destination
         ## TODO: Process route flags (exact, etc)
-    if protocol is not "all":
+    if protocol != "all":
         cmd_args["protocol"]=protocol
-    if instance_name is not "all":
+    if instance_name != "all":
         cmd_args["instance_name"]=instance_name
-    if table is not "all":
+    if table != "all":
         cmd_args["table"]=table
-    if rib_sharding is not "main":
+    if rib_sharding != "main":
         cmd_args["rib-sharding"]=rib_sharding
     if hidden:
         cmd_args["hidden"]=hidden
@@ -51,7 +51,7 @@ def pyez_route_info(
         data = device.rpc.get_route_martians(**cmd_args)
     elif localization:
         data = device.rpc.get_fib_localization_information(**cmd_args)
-    elif instance_name is not "all":
+    elif instance_name != "all":
         ## TODO: Doesn't work - NameError: name 'instance' is not defined
         data = device.rpc.get-instance-information(**cmd_args)
     else:
