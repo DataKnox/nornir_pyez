@@ -7,7 +7,7 @@ from jnpr.junos.utils.scp import SCP
 
 def pyez_scp(
     task: Task,
-    direction: str,
+    direction: str = "put",
     file: str,
     path: str,
     scpargs: Dict = {"progress": True},
