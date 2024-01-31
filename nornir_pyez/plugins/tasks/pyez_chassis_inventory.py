@@ -9,14 +9,15 @@ import json
 
 def pyez_chassis_inventory(
     task: Task,
-    models: str = False
+    extras: Dict = None,
 ) -> Result:
 
     device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
-    if models:
-        data = device.rpc.get_chassis_inventory(models=True)
+
+    if extras:
+        data = device.rpc.get_chassis_inventory(**extras)
     else:
-        data = device.rpc.get_chassis_inventory(models=False)
+        data = device.rpc.get_chassis_inventory()
     data = etree.tostring(data, encoding='unicode', pretty_print=True)
     parsed = xmltodict.parse(data)
     clean_parse = json.loads(json.dumps(parsed))
