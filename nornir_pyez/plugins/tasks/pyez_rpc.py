@@ -19,7 +19,11 @@ def pyez_rpc(
         data = function(**extras)
     else:
         data = function()
-    data = etree.tostring(data, encoding='unicode', pretty_print=True)
+    if isinstance(data, bool):
+        data = f'''<nornir_pyez_notification>This is a known error for some RPC, this RPC request didn't return a well 
+        formed XML message, but: {data}</nornir_pyez_notification>'''
+    else:
+        data = etree.tostring(data, encoding='unicode', pretty_print=True)
     parsed = xmltodict.parse(data)
     clean_parse = json.loads(json.dumps(parsed))
     return Result(host=task.host, result=clean_parse)
