@@ -13,5 +13,5 @@ def pyez_scp(
 ) -> Result:
     device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
     with SCP(device, **scpargs) as scp:
-        print(scp.put(file, path))
+        scp.put(file, path)
     return Result(host=task.host, result=f"Successfully copied")
