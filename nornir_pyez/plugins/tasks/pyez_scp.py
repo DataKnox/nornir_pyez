@@ -7,10 +7,10 @@ from jnpr.junos.utils.scp import SCP
 
 def pyez_scp(
     task: Task,
-    direction: str = "put",
     file: str,
     path: str,
     scpargs: Dict = {"progress": True},
+    direction: str = "put",
 ) -> Result:
     device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
 
