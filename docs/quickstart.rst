@@ -3,7 +3,7 @@ quickstart
 
 1) Install Nornir_PyEZ::
 
-    pip install nornir-pyez==0.2.1
+    pip install nornir-pyez==0.2.10
 
 
 2) Import the Task you care about, such as collecting facts::
