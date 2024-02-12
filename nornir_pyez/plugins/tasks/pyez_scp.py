@@ -10,8 +10,20 @@ def pyez_scp(
     file: str,
     path: str,
     scpargs: Dict = {"progress": True},
+    direction: str = "put",
 ) -> Result:
     device = task.host.get_connection(CONNECTION_NAME, task.nornir.config)
+
     with SCP(device, **scpargs) as scp:
-        scp.put(file, path)
-    return Result(host=task.host, result=f"Successfully copied")
+        if direction == "put":
+            # File: local file name - path: remote path
+            scp.put(file, path)
+        elif direction == "get":
+            # File: remote file name - path: local path
+            scp.get(file, path)
+        else:
+            raise ValueError("Direction must be either put or get")
+
+    return Result(
+        host=task.host, result=f"{direction.upper()} file operation successful"
+    )
