@@ -14,7 +14,7 @@ junos-eznc = "^2.7.3"
 nornir = { version = ">=3.5.0", allow-prereleases = true }
 xmltodict = "0.14.2"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 nornir_utils = { version = "*", allow-prereleases = true }
 
 
