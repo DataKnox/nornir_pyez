@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nornir_pyez"
-version = "0.2.10"
+version = "0.3.0"
 description = "PyEZ Plugin for Nornir"
 authors = ["Knox Hutchinson <knox@knoxsdata.com>"]
 license = "Apache-2.0"
@@ -9,15 +9,15 @@ license = "Apache-2.0"
 "pyez" = "nornir_pyez.plugins.connections:Pyez"
 
 [tool.poetry.dependencies]
-python = "^3.6"
-junos-eznc = "^2.5"
-nornir = { version = ">=3.0.0", allow-prereleases = true }
-xmltodict = "0.12.0"
+python = "^3.9"
+junos-eznc = "^2.7.3"
+nornir = { version = ">=3.5.0", allow-prereleases = true }
+xmltodict = "0.14.2"
 
-[tool.poetry.dev-dependencies]
+[tool.poetry.group.dev.dependencies]
 nornir_utils = { version = "*", allow-prereleases = true }
 
 
 [build-system]
-requires = ["poetry>=0.12"]
+requires = ["poetry>=2.1.1"]
 build-backend = "poetry.masonry.api"
